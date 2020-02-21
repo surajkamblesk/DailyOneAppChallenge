@@ -12,25 +12,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="#90CEEB"
-        android:backgroundTint="#0CF714"
-        android:fontFamily="cursive"
+        android:background="#0C44E9"
+        android:backgroundTint="#2E312E"
+        android:fontFamily="sans-serif-condensed-light"
         android:text="BMI Calculator"
         android:textAlignment="center"
-        android:textColor="#ffffff"
+        android:textColor="#0DE616"
         android:textSize="40dp" />
 
     <EditText
         android:id="@+id/ET_weight"
-        android:layout_width="371dp"
+        android:layout_width="300dp"
         android:layout_height="39dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="157dp"
+        android:layout_marginStart="58dp"
 
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="161dp"
         android:background="@drawable/field_style"
         android:backgroundTint="#FAF7F3F3"
         android:hint="Enter Your Weight(Kgs)"
@@ -40,30 +40,31 @@
 
     <EditText
         android:id="@+id/ET_height"
-        android:layout_width="371dp"
+        android:layout_width="300dp"
         android:layout_height="39dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+
         android:layout_centerInParent="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="226dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="224dp"
         android:background="@drawable/field_style"
         android:hint="Enter Your Height(Cms)"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textColorHint="@android:color/background_dark" />
 
+
     <Button
         android:id="@+id/btn_calculate"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/ET_height"
-        android:background="@drawable/button_style"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="-75dp"
+        android:layout_marginBottom="-62dp"
+        android:background="@drawable/button_style"
         android:backgroundTint="#A68BC34A"
         android:text="Calculate" />
-
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -75,5 +76,14 @@
         android:layout_marginBottom="20dp"
         app:adSize="BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="233dp"
+         />
 
 </RelativeLayout>

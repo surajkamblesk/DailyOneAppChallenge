@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         input_height = findViewById(R.id.ET_height);
         input_weight = findViewById(R.id.ET_weight);
         btn_Calculate = findViewById(R.id.btn_calculate);
+        result = findViewById(R.id.tv_result);
     }
 
     private void CalculateBMI() {
@@ -88,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
-        Toast.makeText(MainActivity.this, " " + ans, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MainActivity.this, " " + ans, Toast.LENGTH_SHORT).show();
+        result.setText(ans);
 
 
     }
