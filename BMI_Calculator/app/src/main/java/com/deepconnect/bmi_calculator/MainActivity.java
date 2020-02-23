@@ -2,6 +2,7 @@ package com.deepconnect.bmi_calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,6 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_Calculate;
     TextView result;
     String ans;
+    double bmi;
 
 
     @Override
@@ -36,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 CalculateBMI();
             }
         });
-
 
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             double cms_height = Double.parseDouble(height) / 100;
             double weight_double = Double.parseDouble(weight);
 
-            double bmi = (weight_double) / (cms_height * cms_height);
+            bmi = (weight_double) / (cms_height * cms_height);
 
 
             if (bmi >= 15 && bmi <= 16) {
@@ -88,9 +88,15 @@ public class MainActivity extends AppCompatActivity {
                 ans = "very severely Obese";
             }
 
+            Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+            int int_bmi = (int) Math.round(bmi);
+            String str_bmi = Double.toString(int_bmi);
+            intent.putExtra("bmi_value", str_bmi);
+            Toast.makeText(MainActivity.this, " " + bmi, Toast.LENGTH_SHORT).show();
+            intent.putExtra("Final_answer", ans);
+            startActivity(intent);
+
         }
-//        Toast.makeText(MainActivity.this, " " + ans, Toast.LENGTH_SHORT).show();
-        result.setText(ans);
 
 
     }
