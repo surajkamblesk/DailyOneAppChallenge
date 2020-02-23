@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+
 public class ResultsActivity extends AppCompatActivity {
     String bmi_value,final_answer;
     TextView Bmi_tv , FinalAnswer_tv;
@@ -15,6 +19,17 @@ public class ResultsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_results);
         BindViews();
         Bundle extras = getIntent().getExtras();
+
+//        GraphView graph =  findViewById(R.id.graph);
+//        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
+//                new DataPoint(0, 1),
+//                new DataPoint(1, 5),
+//                new DataPoint(2, 3),
+//                new DataPoint(3, 2),
+//                new DataPoint(4, 6)
+//        });
+//        graph.addSeries(series);
+
 
         if (extras != null) {
            bmi_value = extras.getString("bmi_value");
@@ -27,7 +42,7 @@ public class ResultsActivity extends AppCompatActivity {
 
         Bmi_tv.setText(bmi_value);
         FinalAnswer_tv.setText(final_answer);
-        Toast.makeText(this, " " + bmi_value, Toast.LENGTH_SHORT).show();
+
 
     }
 

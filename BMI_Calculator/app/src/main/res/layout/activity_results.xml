@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultsActivity">
+    tools:context=".ResultsActivity"
+    tools:ignore="ExtraText">
 
     <TextView
         android:id="@+id/tv_title"
@@ -34,7 +35,9 @@
         android:layout_marginEnd="-3dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:textSize="20dp"
         android:text="BMI RESULTS" />
+
 
     <TextView
         android:id="@+id/tv_finalAnswer"
@@ -44,13 +47,25 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="173dp"
-        android:layout_marginEnd="-1dp"
+        android:layout_marginStart="4dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginEnd="-3dp"
         android:layout_marginRight="20dp"
-        android:text="BMI RESULTS" />
+        android:text="BMI RESULTS"
+        android:textSize="20dp" />
 
+<!--    <com.jjoe64.graphview.GraphView-->
+<!--        android:id="@+id/graph"-->
+<!--        android:layout_width="391dp"-->
+<!--        android:layout_height="310dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="180dp" />-->
 
 </RelativeLayout>
 

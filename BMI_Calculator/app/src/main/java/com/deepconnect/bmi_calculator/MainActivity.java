@@ -16,7 +16,6 @@ import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -89,15 +88,14 @@ public class MainActivity extends AppCompatActivity {
                 ans = "very severely Obese";
             }
 
+            Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
+            String str_bmi = Double.toString(bmi);
+            intent.putExtra("bmi_value", str_bmi);
+            Toast.makeText(MainActivity.this, " " + bmi, Toast.LENGTH_SHORT).show();
+            intent.putExtra("Final_answer", ans);
+            startActivity(intent);
+
         }
-//        Toast.makeText(MainActivity.this, " " + ans, Toast.LENGTH_SHORT).show();
-//        result.setText(ans);
-        Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
-        String str_bmi = Double.toString(bmi);
-        intent.putExtra("bmi_value", str_bmi);
-        Toast.makeText(MainActivity.this, " " + bmi, Toast.LENGTH_SHORT).show();
-        intent.putExtra("Final_answer", ans);
-        startActivity(intent);
 
 
     }
