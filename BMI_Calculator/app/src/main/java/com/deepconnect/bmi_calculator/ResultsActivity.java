@@ -40,7 +40,7 @@ public class ResultsActivity extends AppCompatActivity {
 
         }
 
-        Bmi_tv.setText(bmi_value);
+        Bmi_tv.setText(bmi_value );
         FinalAnswer_tv.setText(final_answer);
 
 

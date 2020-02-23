@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ecf0f1"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,27 +12,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="#0C44E9"
-        android:backgroundTint="#2E312E"
+
+
         android:fontFamily="sans-serif-condensed-light"
-        android:text="BMI Calculator"
+        android:text="BMI CALCULATOR"
         android:textAlignment="center"
         android:textColor="#0DE616"
         android:textSize="40dp" />
 
 
-
     <EditText
         android:id="@+id/ET_weight"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+
+        android:layout_height="47dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
 
         android:layout_centerInParent="true"
-        android:layout_marginStart="7dp"
+        android:layout_marginStart="12dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="161dp"
+        android:layout_marginTop="156dp"
         android:background="@drawable/field_style"
         android:backgroundTint="#FAF7F3F3"
         android:hint="Enter Your Weight(Kgs)"
@@ -40,17 +40,18 @@
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_dark" />
 
-
     <EditText
         android:id="@+id/ET_height"
-        android:layout_width="match_parent"
-        android:layout_height="39dp"
+        android:layout_width="395dp"
+        android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="6dp"
+        android:layout_marginStart="12dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="219dp"
+        android:layout_marginTop="224dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/field_style"
         android:hint="Enter Your Height(Cms)"
         android:textAlignment="center"
@@ -59,11 +60,11 @@
 
     <Button
         android:id="@+id/btn_calculate"
-        android:layout_width="160dp"
+        android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/ET_height"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="-62dp"
+        android:layout_marginBottom="-73dp"
         android:background="@drawable/button_style"
         android:backgroundTint="#A68BC34A"
         android:text="Calculate" />

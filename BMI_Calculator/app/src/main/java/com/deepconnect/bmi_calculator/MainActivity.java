@@ -89,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             Intent intent = new Intent(MainActivity.this, ResultsActivity.class);
-            String str_bmi = Double.toString(bmi);
+            int int_bmi = (int) Math.round(bmi);
+            String str_bmi = Double.toString(int_bmi);
             intent.putExtra("bmi_value", str_bmi);
             Toast.makeText(MainActivity.this, " " + bmi, Toast.LENGTH_SHORT).show();
             intent.putExtra("Final_answer", ans);
